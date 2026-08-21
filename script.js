@@ -4,6 +4,17 @@
    the page work — you shouldn't need to touch it.
    ========================================================================= */
 
+
+
+   // Simple password protection
+const password = prompt("Please enter the family password to view the album:");
+
+if (password !== "kavi") { 
+    alert("Incorrect password. Access denied.");
+    document.body.innerHTML = "<h1>Access Denied. This website is private.</h1>";
+    window.stop(); // Stops the rest of the script from running
+}
+
 const albumsData = [
   {
     title: "Frame of Favorites",
